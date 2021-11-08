@@ -3,10 +3,34 @@
  * included in this file.
  */
 
- .featured-card {
-     min-width: 90%;
+
+ /* Featured News Card */
+ #wpbody-content > div.bg-light.p-5.rounded-lg.m-3 > div > div > div.col-8.left-column > div.card.text-center.featured-card {
+     min-width: 100%;
  }
 
- .get-started-card {
-    min-width: 90%;
+
+ /* Get Started Card */
+ #wpbody-content > div.bg-light.p-5.rounded-lg.m-3 > div > div > div.col-8.left-column > div.card.get-started-card {
+    min-width: 100%;
+ }
+
+
+ /* Premium Version Card */
+ #wpbody-content > div.bg-light.p-5.rounded-lg.m-3 > div > div > div.col-4.right-column > div {
+     min-width: 98%;
+ }
+
+ #wpbody-content > div.bg-light.p-5.rounded-lg.m-3 > div > div > div.col-4.right-column > div > div.card-header > h5 {
+     text-align: center;
+ }
+
+ #wpbody-content > div.bg-light.p-5.rounded-lg.m-3 > div > div > div.col-4.right-column > div > div.card-footer {
+     text-align: center;
+ }
+
+ /* Settings Section */
+ #wpbody-content > div.bg-light.p-5.rounded-lg.m-3 > div > div > div.col-8.left-column > form > div:nth-child(5) > #exampleFormControlInput1 {
+    max-width: 50%;
+    min-width: 10em;
  }

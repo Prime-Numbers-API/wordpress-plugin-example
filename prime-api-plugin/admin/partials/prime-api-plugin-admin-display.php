@@ -97,7 +97,7 @@
 
 
         <div class="col-4 right-column"><!-- column 2 of 2 -->
-          <div class="card" style="width: 18rem;">
+          <div class="card" >
             <div class="card-header">
               <h5>Premium Version</h5> 
             </div>
