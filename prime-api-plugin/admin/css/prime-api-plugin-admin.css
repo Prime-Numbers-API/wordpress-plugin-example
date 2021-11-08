@@ -4,5 +4,9 @@
  */
 
  .featured-card {
-     min-width: 100%;
+     min-width: 90%;
+ }
+
+ .get-started-card {
+    min-width: 90%;
  }

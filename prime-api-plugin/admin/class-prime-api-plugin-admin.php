@@ -74,7 +74,7 @@ class Prime_Api_Plugin_Admin {
 		 */
 		//$this->prime_api_plugin
 		wp_enqueue_style( 'bootstrap-css', plugin_dir_url( __FILE__ ) . 'css/bootstrap.min.css', array(), $this->version, 'all' );
-		wp_enqueue_style( 'custom-css', plugin_dir_url( __FILE__ ) . 'css/prime-api-plugin-admin.css', array(), $this->version, 'all' );
+		wp_enqueue_style( 'custom-css', plugin_dir_url( __FILE__ ) . 'css/prime-api-plugin-admin.css', array(), null, 'all' );
 
 	}
 
