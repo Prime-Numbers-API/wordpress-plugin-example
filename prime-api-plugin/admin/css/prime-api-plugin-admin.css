@@ -4,16 +4,24 @@
  */
 
 
+
+
  /* Featured News Card */
  #wpbody-content > div.bg-light.p-5.rounded-lg.m-3 > div > div > div.col-8.left-column > div.card.text-center.featured-card {
      min-width: 100%;
  }
+
+ 
+
 
 
  /* Get Started Card */
  #wpbody-content > div.bg-light.p-5.rounded-lg.m-3 > div > div > div.col-8.left-column > div.card.get-started-card {
     min-width: 100%;
  }
+
+
+
 
 
  /* Premium Version Card */
@@ -29,8 +37,52 @@
      text-align: center;
  }
 
+
+
+
+
+
  /* Settings Section */
- #wpbody-content > div.bg-light.p-5.rounded-lg.m-3 > div > div > div.col-8.left-column > form > div:nth-child(5) > #exampleFormControlInput1 {
+ #wpbody-content > div.bg-light.p-5.rounded-lg.m-3 > div > div > div.col-8.left-column > form.plugin-settings > div.form-group > input.form-control {
     max-width: 50%;
     min-width: 10em;
+    margin-bottom: 10px;
  }
+
+ #wpbody-content > div.bg-light.p-5.rounded-lg.m-3 > div > div > div.col-8.left-column > form.plugin-settings > div.form-group > input.form-check-input:checked {
+    background-color: #fff;
+ }
+
+ label.form-check-label {
+     padding-bottom: 5px;
+ }
+
+ .checkbox-form {
+     margin-top: 5px;
+ }
+
+ #wpbody-content > div.bg-light.p-5.rounded-lg.m-3 > div > div > div.col-8.left-column > form.plugin-settings > button.mb-2 {
+    margin-top: 15px;
+ }
+
+
+
+
+
+ @media(max-width: 768px) {
+    div.row {
+      display: block;
+    }
+    div.left-column {
+        width: 98%;
+    }
+    div.right-column {
+        width: 98%;
+    }
+  }
+
+  @media(max-width: 482px) {
+      label.form-check-label {
+          display: inline;
+      }
+  }
