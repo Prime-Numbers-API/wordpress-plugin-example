@@ -14,10 +14,10 @@
  *
  * @wordpress-plugin
  * Plugin Name:       Prime Numbers API Plugin
- * Plugin URI:        http://example.com/prime-numbers-api-plugin-uri/
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Plugin URI:        https://github.com/Prime-Numbers-API/wordpress-plugin-example
+ * Description:       Communicate with the Prime Numbers API to make any of five get requests
  * Version:           1.0.0
- * Author:            Your Name or Your Company
+ * Author:            eBusiness Media
  * Author URI:        http://example.com/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
