@@ -6,8 +6,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Prime_Api_Plugin
- * @subpackage Prime_Api_Plugin/public
+ * @package    prime_numbers_api_Plugin
+ * @subpackage prime_numbers_api_Plugin/public
  */
 
 /**
@@ -16,20 +16,20 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the public-facing stylesheet and JavaScript.
  *
- * @package    Prime_Api_Plugin
- * @subpackage Prime_Api_Plugin/public
+ * @package    prime_numbers_api_Plugin
+ * @subpackage prime_numbers_api_Plugin/public
  * @author     Your Name <email@example.com>
  */
-class Prime_Api_Plugin_Public {
+class prime_numbers_api_Plugin_Public {
 
 	/**
 	 * The ID of this plugin.
 	 *
 	 * @since    1.0.0
 	 * @access   private
-	 * @var      string    $prime_api_plugin    The ID of this plugin.
+	 * @var      string    $prime_numbers_api_plugin    The ID of this plugin.
 	 */
-	private $prime_api_plugin;
+	private $prime_numbers_api_plugin;
 
 	/**
 	 * The version of this plugin.
@@ -44,12 +44,12 @@ class Prime_Api_Plugin_Public {
 	 * Initialize the class and set its properties.
 	 *
 	 * @since    1.0.0
-	 * @param      string    $prime_api_plugin       The name of the plugin.
+	 * @param      string    $prime_numbers_api_plugin       The name of the plugin.
 	 * @param      string    $version    The version of this plugin.
 	 */
-	public function __construct( $prime_api_plugin, $version ) {
+	public function __construct( $prime_numbers_api_plugin, $version ) {
 
-		$this->prime_api_plugin = $prime_api_plugin;
+		$this->prime_numbers_api_plugin = $prime_numbers_api_plugin;
 		$this->version = $version;
 
 	}
@@ -65,15 +65,15 @@ class Prime_Api_Plugin_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Prime_Api_Plugin_Loader as all of the hooks are defined
+		 * defined in prime_numbers_api_Plugin_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Prime_Api_Plugin_Loader will then create the relationship
+		 * The prime_numbers_api_Plugin_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->prime_api_plugin, plugin_dir_url( __FILE__ ) . 'css/prime-api-plugin-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->prime_numbers_api_plugin, plugin_dir_url( __FILE__ ) . 'css/prime-numbers-api-plugin-public.css', array(), $this->version, 'all' );
 
 	}
 
@@ -88,15 +88,15 @@ class Prime_Api_Plugin_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Prime_Api_Plugin_Loader as all of the hooks are defined
+		 * defined in prime_numbers_api_Plugin_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Prime_Api_Plugin_Loader will then create the relationship
+		 * The prime_numbers_api_Plugin_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->prime_api_plugin, plugin_dir_url( __FILE__ ) . 'js/prime-api-plugin-public.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->prime_numbers_api_plugin, plugin_dir_url( __FILE__ ) . 'js/prime-numbers-api-plugin-public.js', array( 'jquery' ), $this->version, false );
 
 	}
 

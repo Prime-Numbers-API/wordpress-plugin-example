@@ -6,8 +6,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Prime_Api_Plugin
- * @subpackage Prime_Api_Plugin/includes
+ * @package    prime_numbers_api_Plugin
+ * @subpackage prime_numbers_api_Plugin/includes
  */
 
 /**
@@ -16,11 +16,11 @@
  * This class defines all code necessary to run during the plugin's deactivation.
  *
  * @since      1.0.0
- * @package    Prime_Api_Plugin
- * @subpackage Prime_Api_Plugin/includes
+ * @package    prime_numbers_api_Plugin
+ * @subpackage prime_numbers_api_Plugin/includes
  * @author     Your Name <email@example.com>
  */
-class Prime_Api_Plugin_Deactivator {
+class prime_numbers_api_Plugin_Deactivator {
 
 	/**
 	 * Short Description. (use period)

@@ -8,12 +8,12 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Prime_Api_Plugin
- * @subpackage Prime_Api_Plugin/admin/partials
+ * @package    prime_numbers_api_Plugin
+ * @subpackage prime_numbers_api_Plugin/admin/partials
  */
 ?>
 
-<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(). './css/prime-api-plugin-admin.css' ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(). './css/prime-numbers-api-plugin-admin.css' ?>">
 
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
 <div class="bg-light p-5 rounded-lg m-3">

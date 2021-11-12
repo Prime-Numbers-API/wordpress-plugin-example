@@ -8,8 +8,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Prime_Api_Plugin
- * @subpackage Prime_Api_Plugin/public/partials
+ * @package    prime_numbers_api_Plugin
+ * @subpackage prime_numbers_api_Plugin/public/partials
  */
 ?>
 

@@ -43,9 +43,9 @@ This section describes how to install the plugin and get it working.
 
 e.g.
 
-1. Upload `prime-api-plugin.php` to the `/wp-content/plugins/` directory
+1. Upload `prime-numbers-api-plugin.php` to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Place `<?php do_action('prime_api_plugin_hook'); ?>` in your templates
+1. Place `<?php do_action('prime_numbers_api_plugin_hook'); ?>` in your templates
 
 == Frequently Asked Questions ==
 

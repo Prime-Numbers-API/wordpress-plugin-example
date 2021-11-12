@@ -10,18 +10,18 @@
  *
  * @link              http://example.com
  * @since             1.0.0
- * @package           Prime_Api_Plugin
+ * @package           prime_numbers_api_Plugin
  *
  * @wordpress-plugin
- * Plugin Name:       Prime API Plugin
- * Plugin URI:        http://example.com/prime-api-plugin-uri/
+ * Plugin Name:       Prime Numbers API Plugin
+ * Plugin URI:        http://example.com/prime-numbers-api-plugin-uri/
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
  * Version:           1.0.0
  * Author:            Your Name or Your Company
  * Author URI:        http://example.com/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       prime-api-plugin
+ * Text Domain:       prime-numbers-api-plugin
  * Domain Path:       /languages
  */
 
@@ -39,30 +39,30 @@ define( 'PLUGIN_NAME_VERSION', '1.0.0' );
 
 /**
  * The code that runs during plugin activation.
- * This action is documented in includes/class-prime-api-plugin-activator.php
+ * This action is documented in includes/class-prime-numbers-api-plugin-activator.php
  */
-function activate_prime_api_plugin() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-prime-api-plugin-activator.php';
-	Prime_Api_Plugin_Activator::activate();
+function activate_prime_numbers_api_plugin() {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-prime-numbers-api-plugin-activator.php';
+	prime_numbers_api_Plugin_Activator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
- * This action is documented in includes/class-prime-api-plugin-deactivator.php
+ * This action is documented in includes/class-prime-numbers-api-plugin-deactivator.php
  */
-function deactivate_prime_api_plugin() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-prime-api-plugin-deactivator.php';
-	Prime_Api_Plugin_Deactivator::deactivate();
+function deactivate_prime_numbers_api_plugin() {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-prime-numbers-api-plugin-deactivator.php';
+	prime_numbers_api_Plugin_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_prime_api_plugin' );
-register_deactivation_hook( __FILE__, 'deactivate_prime_api_plugin' );
+register_activation_hook( __FILE__, 'activate_prime_numbers_api_plugin' );
+register_deactivation_hook( __FILE__, 'deactivate_prime_numbers_api_plugin' );
 
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require plugin_dir_path( __FILE__ ) . 'includes/class-prime-api-plugin.php';
+require plugin_dir_path( __FILE__ ) . 'includes/class-prime-numbers-api-plugin.php';
 
 /**
  * Begins execution of the plugin.
@@ -73,10 +73,10 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-prime-api-plugin.php';
  *
  * @since    1.0.0
  */
-function run_prime_api_plugin() {
+function run_prime_numbers_api_plugin() {
 
-	$plugin = new Prime_Api_Plugin();
+	$plugin = new prime_numbers_api_Plugin();
 	$plugin->run();
 
 }
-run_prime_api_plugin();
+run_prime_numbers_api_plugin();

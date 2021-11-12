@@ -9,8 +9,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Prime_Api_Plugin
- * @subpackage Prime_Api_Plugin/includes
+ * @package    prime_numbers_api_Plugin
+ * @subpackage prime_numbers_api_Plugin/includes
  */
 
 /**
@@ -20,11 +20,11 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    Prime_Api_Plugin
- * @subpackage Prime_Api_Plugin/includes
+ * @package    prime_numbers_api_Plugin
+ * @subpackage prime_numbers_api_Plugin/includes
  * @author     Your Name <email@example.com>
  */
-class Prime_Api_Plugin_i18n {
+class prime_numbers_api_Plugin_i18n {
 
 
 	/**
@@ -35,7 +35,7 @@ class Prime_Api_Plugin_i18n {
 	public function load_plugin_textdomain() {
 
 		load_plugin_textdomain(
-			'prime-api-plugin',
+			'prime-numbers-api-plugin',
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);

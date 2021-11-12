@@ -22,7 +22,7 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Prime_Api_Plugin
+ * @package    prime_numbers_api_Plugin
  */
 
 // If uninstall not called from WordPress, then exit.

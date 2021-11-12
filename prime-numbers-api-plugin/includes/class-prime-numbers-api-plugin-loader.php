@@ -6,8 +6,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Prime_Api_Plugin
- * @subpackage Prime_Api_Plugin/includes
+ * @package    prime_numbers_api_Plugin
+ * @subpackage prime_numbers_api_Plugin/includes
  */
 
 /**
@@ -17,11 +17,11 @@
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @package    Prime_Api_Plugin
- * @subpackage Prime_Api_Plugin/includes
+ * @package    prime_numbers_api_Plugin
+ * @subpackage prime_numbers_api_Plugin/includes
  * @author     Your Name <email@example.com>
  */
-class Prime_Api_Plugin_Loader {
+class prime_numbers_api_Plugin_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.

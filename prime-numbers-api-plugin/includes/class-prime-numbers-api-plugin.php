@@ -9,8 +9,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Prime_Api_Plugin
- * @subpackage Prime_Api_Plugin/includes
+ * @package    prime_numbers_api_Plugin
+ * @subpackage prime_numbers_api_Plugin/includes
  */
 
 /**
@@ -23,11 +23,11 @@
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    Prime_Api_Plugin
- * @subpackage Prime_Api_Plugin/includes
+ * @package    prime_numbers_api_Plugin
+ * @subpackage prime_numbers_api_Plugin/includes
  * @author     Your Name <email@example.com>
  */
-class Prime_Api_Plugin {
+class prime_numbers_api_Plugin {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -35,7 +35,7 @@ class Prime_Api_Plugin {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Prime_Api_Plugin_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      prime_numbers_api_Plugin_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -44,9 +44,9 @@ class Prime_Api_Plugin {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      string    $prime_api_plugin    The string used to uniquely identify this plugin.
+	 * @var      string    $prime_numbers_api_plugin    The string used to uniquely identify this plugin.
 	 */
-	protected $prime_api_plugin;
+	protected $prime_numbers_api_plugin;
 
 	/**
 	 * The current version of the plugin.
@@ -72,7 +72,7 @@ class Prime_Api_Plugin {
 		} else {
 			$this->version = '1.0.0';
 		}
-		$this->prime_api_plugin = 'prime-api-plugin';
+		$this->prime_numbers_api_plugin = 'prime-numbers-api-plugin';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -86,10 +86,10 @@ class Prime_Api_Plugin {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Prime_Api_Plugin_Loader. Orchestrates the hooks of the plugin.
-	 * - Prime_Api_Plugin_i18n. Defines internationalization functionality.
-	 * - Prime_Api_Plugin_Admin. Defines all hooks for the admin area.
-	 * - Prime_Api_Plugin_Public. Defines all hooks for the public side of the site.
+	 * - prime_numbers_api_Plugin_Loader. Orchestrates the hooks of the plugin.
+	 * - prime_numbers_api_Plugin_i18n. Defines internationalization functionality.
+	 * - prime_numbers_api_Plugin_Admin. Defines all hooks for the admin area.
+	 * - prime_numbers_api_Plugin_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -103,33 +103,33 @@ class Prime_Api_Plugin {
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-prime-api-plugin-loader.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-prime-numbers-api-plugin-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-prime-api-plugin-i18n.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-prime-numbers-api-plugin-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-prime-api-plugin-admin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-prime-numbers-api-plugin-admin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-prime-api-plugin-public.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-prime-numbers-api-plugin-public.php';
 
-		$this->loader = new Prime_Api_Plugin_Loader();
+		$this->loader = new prime_numbers_api_Plugin_Loader();
 
 	}
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the Prime_Api_Plugin_i18n class in order to set the domain and to register the hook
+	 * Uses the prime_numbers_api_Plugin_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since    1.0.0
@@ -137,7 +137,7 @@ class Prime_Api_Plugin {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Prime_Api_Plugin_i18n();
+		$plugin_i18n = new prime_numbers_api_Plugin_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
@@ -152,7 +152,7 @@ class Prime_Api_Plugin {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Prime_Api_Plugin_Admin( $this->get_prime_api_plugin(), $this->get_version() );
+		$plugin_admin = new prime_numbers_api_Plugin_Admin( $this->get_prime_numbers_api_plugin(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -174,7 +174,7 @@ class Prime_Api_Plugin {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Prime_Api_Plugin_Public( $this->get_prime_api_plugin(), $this->get_version() );
+		$plugin_public = new prime_numbers_api_Plugin_Public( $this->get_prime_numbers_api_plugin(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -204,15 +204,15 @@ class Prime_Api_Plugin {
 	 * @since     1.0.0
 	 * @return    string    The name of the plugin.
 	 */
-	public function get_prime_api_plugin() {
-		return $this->prime_api_plugin;
+	public function get_prime_numbers_api_plugin() {
+		return $this->prime_numbers_api_plugin;
 	}
 
 	/**
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    Prime_Api_Plugin_Loader    Orchestrates the hooks of the plugin.
+	 * @return    prime_numbers_api_Plugin_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;
