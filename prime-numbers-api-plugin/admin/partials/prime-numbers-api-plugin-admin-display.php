@@ -58,7 +58,7 @@
                 <div class="card-body">
                   <div class="form-group api-form">
                     <label for="exampleFormControlInput1"><strong>API Key:</strong></label>
-                    <input type="number" name="api_key" value="<?php echo get_option( 'api_key' ); ?>" class="form-control" id="exampleFormControlInput1" placeholder="Ex: 123" required>
+                    <input type="number" name="api_key" value="<?php echo get_option( 'api_key' ); ?>" class="form-control" id="exampleFormControlInput1" placeholder="Ex: YOUR_API_KEY" required>
                   </div>
                   <div class="form-group checkbox-form">
                   <input class="form-check-input" type="checkbox" name="is_prime" value="1" <?php checked(1, get_option('is_prime'), true); ?> id="defaultCheck1">
