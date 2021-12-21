@@ -60,32 +60,33 @@
                     <label for="exampleFormControlInput1"><strong>API Key:</strong></label>
                     <input type="number" name="api_key" value="<?php echo get_option( 'api_key' ); ?>" class="form-control" id="exampleFormControlInput1" placeholder="Ex: YOUR_API_KEY" required>
                   </div>
+                  <label for="endpointInput"><strong>Endpoint Selection:</strong></label>
                   <div class="form-group checkbox-form">
-                  <input class="form-check-input" type="checkbox" name="is_prime" value="1" <?php checked(1, get_option('is_prime'), true); ?> id="defaultCheck1">
-                  <label class="form-check-label" for="defaultCheck1">
-                    Is This Number Prime
-                  </label>
+                    <input class="form-check-input" type="checkbox" name="is_prime" value="1" <?php checked(1, get_option('is_prime'), true); ?> id="defaultCheck1 endpointInput">
+                    <label class="form-check-label" for="defaultCheck1">
+                      Is This Number Prime
+                    </label>
                   </div>
                   <div class="form-group checkbox-form">
-                    <input class="form-check-input" type="checkbox" name="get_random_prime" value="1" <?php checked(1, get_option('get_random_prime'), true); ?> id="defaultCheck2">
+                    <input class="form-check-input" type="checkbox" name="get_random_prime" value="1" <?php checked(1, get_option('get_random_prime'), true); ?> id="defaultCheck2 endpointInput">
                     <label class="form-check-label" for="defaultCheck2">
                       Get Random Prime
                     </label>
                   </div>
                   <div class="form-group checkbox-form">
-                    <input class="form-check-input" type="checkbox" name="get_primes_between_two_numbers" value="1" <?php checked(1, get_option('get_primes_between_two_numbers'), true); ?> id="defaultCheck3">
+                    <input class="form-check-input" type="checkbox" name="get_primes_between_two_numbers" value="1" <?php checked(1, get_option('get_primes_between_two_numbers'), true); ?> id="defaultCheck3 endpointInput">
                     <label class="form-check-label" for="defaultCheck3">
                       Get All Primes Between Two Numbers
                     </label>
                   </div>
                   <div class="form-group checkbox-form">
-                    <input class="form-check-input" type="checkbox" name="prospect_primes" value="1" <?php checked(1, get_option('prospect_primes'), true); ?> id="defaultCheck4">
+                    <input class="form-check-input" type="checkbox" name="prospect_primes" value="1" <?php checked(1, get_option('prospect_primes'), true); ?> id="defaultCheck4 endpointInput">
                     <label class="form-check-label" for="defaultCheck4">
                       Prospect Primes Between Two Numbers
                     </label>
                   </div>
                   <div class="form-group checkbox-form">
-                    <input class="form-check-input" type="checkbox" name="get_isolated_random_prime" value="1" <?php checked(1, get_option('get_isolated_random_prime'), true); ?> id="defaultCheck5">
+                    <input class="form-check-input" type="checkbox" name="get_isolated_random_prime" value="1" <?php checked(1, get_option('get_isolated_random_prime'), true); ?> id="defaultCheck5 endpointInput">
                     <label class="form-check-label" for="defaultCheck5">
                       Get Isolated Random Prime
                     </label>
