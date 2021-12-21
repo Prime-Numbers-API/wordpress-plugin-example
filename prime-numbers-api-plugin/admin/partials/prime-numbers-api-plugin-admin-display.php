@@ -62,10 +62,12 @@
                   </div>
                   <label for="endpointInput"><strong>Endpoint Selection:</strong></label>
                   <div class="form-group checkbox-form">
-                    <input class="form-check-input" type="checkbox" name="is_prime" value="1" <?php checked(1, get_option('is_prime'), true); ?> id="defaultCheck1 endpointInput">
+                    <input class="form-check-input" type="checkbox" name="is_this_number_prime" value="1" <?php checked(1, get_option('is_this_number_prime'), true); ?> id="defaultCheck1 endpointInput">
                     <label class="form-check-label" for="defaultCheck1">
                       Is This Number Prime
                     </label>
+                    <label for="checkIsThisNumberPrime"><strong>Number:</strong></label>
+                    <input type="number" name="number" value="<?php echo get_option( 'number' ); ?>" class="form-control" id="checkIsThisNumberPrime" placeholder="Number you want to check" required>
                   </div>
                   <div class="form-group checkbox-form">
                     <input class="form-check-input" type="checkbox" name="get_random_prime" value="1" <?php checked(1, get_option('get_random_prime'), true); ?> id="defaultCheck2 endpointInput">

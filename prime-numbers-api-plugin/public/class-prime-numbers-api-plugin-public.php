@@ -100,28 +100,37 @@ class prime_numbers_api_Plugin_Public {
 
 	}
 
+	// function console_log($output, $with_script_tags = true) {
+	// 	$js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) . ');';
+	// 	if ($with_script_tags) {
+	// 		$js_code = '<script>' . $js_code . '</script>';
+	// 	}
+	// 	echo $js_code;
+	// }
 
 	
-	
 	public function public_is_this_number_prime() {
-		//get settings information
+
+
+		//get general settings
 		$user_api_key = get_option( 'api_key' );
-		$user_is_prime = get_option( 'is_prime' );
+		$user_is_prime = get_option( 'is_this_number_prime' );
+		$user_check_is_number_prime = get_option( 'number' );
 		$user_get_random_prime = get_option( 'get_random_prime' );
 		$user_get_primes_between_two_numbers = get_option( 'get_primes_between_two_numbers' );
 		$user_prospect_primes = get_option( 'prospect_primes' );
 		$user_get_isolated_random_prime = get_option( 'get_isolated_random_prime' );
 
 		if ($user_is_prime == "1") {
-				$url = 'http://api.prime-numbers.io/is-this-number-prime.php?key=' . $user_api_key . '&number=41';
-				
+				$url = 'http://api.prime-numbers.io/is-this-number-prime.php?key=' . $user_api_key . '&number=' . $user_check_is_number_prime;
+				// console_log($url);
 				$arguments = array(
 					'method' => 'GET',
 					'timeout' => '12'
 				);
 			
 				$response = wp_remote_get( $url, $arguments );
-			
+				// console_log($response);
 				if ( is_wp_error( $response ) ) {
 					$error_message = $response->get_error_message();
 					return "Something went wrong: $error_message";
@@ -168,9 +177,9 @@ class prime_numbers_api_Plugin_Public {
 
 
 	public function public_get_random_prime() {
-		//get general settings api key
+		//get general settings
 		$user_api_key = get_option( 'api_key' );
-		$user_is_prime = get_option( 'is_prime' );
+		$user_is_prime = get_option( 'is_this_number_prime' );
 		$user_get_random_prime = get_option( 'get_random_prime' );
 		$user_get_primes_between_two_numbers = get_option( 'get_primes_between_two_numbers' );
 		$user_prospect_primes = get_option( 'prospect_primes' );
@@ -229,9 +238,9 @@ class prime_numbers_api_Plugin_Public {
 
 
 	public function public_get_primes_between_two_numbers() {
-		//get general settings api key
+		//get general settings
 		$user_api_key = get_option( 'api_key' );
-		$user_is_prime = get_option( 'is_prime' );
+		$user_is_prime = get_option( 'is_this_number_prime' );
 		$user_get_random_prime = get_option( 'get_random_prime' );
 		$user_get_primes_between_two_numbers = get_option( 'get_primes_between_two_numbers' );
 		$user_prospect_primes = get_option( 'prospect_primes' );
@@ -298,9 +307,9 @@ class prime_numbers_api_Plugin_Public {
 
 
 	public function public_prospect_primes() {
-		//get general settings api key
+		//get general settings
 		$user_api_key = get_option( 'api_key' );
-		$user_is_prime = get_option( 'is_prime' );
+		$user_is_prime = get_option( 'is_this_number_prime' );
 		$user_get_random_prime = get_option( 'get_random_prime' );
 		$user_get_primes_between_two_numbers = get_option( 'get_primes_between_two_numbers' );
 		$user_prospect_primes = get_option( 'prospect_primes' );
@@ -363,9 +372,9 @@ class prime_numbers_api_Plugin_Public {
 
 
 	public function public_get_isolated_random_prime() {
-		//get general settings api key
+		//get general settings
 		$user_api_key = get_option( 'api_key' );
-		$user_is_prime = get_option( 'is_prime' );
+		$user_is_prime = get_option( 'is_this_number_prime' );
 		$user_get_random_prime = get_option( 'get_random_prime' );
 		$user_get_primes_between_two_numbers = get_option( 'get_primes_between_two_numbers' );
 		$user_prospect_primes = get_option( 'prospect_primes' );

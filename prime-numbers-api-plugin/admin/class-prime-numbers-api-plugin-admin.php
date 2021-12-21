@@ -132,7 +132,8 @@ class prime_numbers_api_Plugin_Admin {
 	 public function register_get_prime_settings() {
 		 //registers all settings for general settings page
 		 register_setting( 'get_prime_settings', 'api_key' );
-		 register_setting( 'get_prime_settings', 'is_prime' );
+		 register_setting( 'get_prime_settings', 'is_this_number_prime' );
+		 register_setting( 'get_prime_settings', 'number' );
 		 register_setting( 'get_prime_settings', 'get_random_prime' );
 		 register_setting( 'get_prime_settings', 'get_primes_between_two_numbers' );
 		 register_setting( 'get_prime_settings', 'prospect_primes' );
