@@ -100,21 +100,21 @@ class prime_numbers_api_Plugin_Public {
 
 	}
 
-	// function console_log($output, $with_script_tags = true) {
-	// 	$js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) . ');';
-	// 	if ($with_script_tags) {
-	// 		$js_code = '<script>' . $js_code . '</script>';
-	// 	}
-	// 	echo $js_code;
-	// }
-
+	
 	
 	public function public_is_this_number_prime() {
-
+		
+		function console_log($output, $with_script_tags = true) {
+			$js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) . ');';
+			if ($with_script_tags) {
+				$js_code = '<script>' . $js_code . '</script>';
+			}
+			echo $js_code;
+		}
 
 		//get general settings
 		$user_api_key = get_option( 'api_key' );
-		$user_include_explanations = get_option( 'include_explanations' );
+		$user_include_explanations = strtolower(get_option( 'include_explanations' ));
 		$user_is_prime = get_option( 'is_this_number_prime' );
 		$user_get_random_prime = get_option( 'get_random_prime' );
 		$user_get_primes_between_two_numbers = get_option( 'get_primes_between_two_numbers' );
@@ -123,7 +123,7 @@ class prime_numbers_api_Plugin_Public {
 
 		if ($user_is_prime == "1") {
 				$url = 'http://api.prime-numbers.io/is-this-number-prime.php?key=' . $user_api_key . '&number=41' . '&include_explanations=' . $user_include_explanations;
-				// console_log($url);
+				console_log($url);
 				$arguments = array(
 					'method' => 'GET',
 					'timeout' => '12'

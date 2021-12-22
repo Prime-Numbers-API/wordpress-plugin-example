@@ -61,10 +61,11 @@
                     <input type="number" name="api_key" value="<?php echo get_option( 'api_key' ); ?>" class="form-control" id="exampleFormControlInput1" placeholder="Ex: YOUR_API_KEY" required>
                   </div>
                   <label for="include_explanations">Include Explanations:</label>
-                  <select id="include_explanations" name="include_explanations">
-                    <option value="<?php echo selected(get_option('include_explanations'), false); ?>">False</option>
-                    <option value="<?php echo selected(get_option('include_explanations'), true); ?>">True</option>
+                  <select class="form-control" id="include_explanations" name="include_explanations">
+                    <option <?php if(get_option('include_explanations') == 'False') { echo( 'selected' );} ?>>False</option>
+                    <option <?php if(get_option('include_explanations') == 'True') { echo( 'selected' );} ?>>True</option>
                   </select>
+                  <br>
                   <label for="endpointInput"><strong>Endpoint Selection:</strong></label>
                   <div class="form-group checkbox-form">
                     <input class="form-check-input" type="checkbox" name="is_this_number_prime" value="1" <?php checked(1, get_option('is_this_number_prime'), true); ?> id="defaultCheck1 endpointInput">
