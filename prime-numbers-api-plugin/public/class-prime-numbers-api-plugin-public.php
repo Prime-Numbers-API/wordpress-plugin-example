@@ -114,15 +114,15 @@ class prime_numbers_api_Plugin_Public {
 
 		//get general settings
 		$user_api_key = get_option( 'api_key' );
+		$user_include_explanations = get_option( 'include_explanations' );
 		$user_is_prime = get_option( 'is_this_number_prime' );
-		$user_check_is_number_prime = get_option( 'number' );
 		$user_get_random_prime = get_option( 'get_random_prime' );
 		$user_get_primes_between_two_numbers = get_option( 'get_primes_between_two_numbers' );
 		$user_prospect_primes = get_option( 'prospect_primes' );
 		$user_get_isolated_random_prime = get_option( 'get_isolated_random_prime' );
 
 		if ($user_is_prime == "1") {
-				$url = 'http://api.prime-numbers.io/is-this-number-prime.php?key=' . $user_api_key . '&number=' . $user_check_is_number_prime;
+				$url = 'http://api.prime-numbers.io/is-this-number-prime.php?key=' . $user_api_key . '&number=41' . '&include_explanations=' . $user_include_explanations;
 				// console_log($url);
 				$arguments = array(
 					'method' => 'GET',
