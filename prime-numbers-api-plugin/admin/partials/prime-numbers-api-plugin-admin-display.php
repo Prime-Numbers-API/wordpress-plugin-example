@@ -66,6 +66,25 @@
                     <option <?php if(get_option('include_explanations') == 'True') { echo( 'selected' );} ?>>True</option>
                   </select>
                   <br>
+                  <label for="include_prime_types_list">Include Prime Types List:</label>
+                  <select class="form-control" id="include_prime_types_list" name="include_prime_types_list">
+                    <option <?php if(get_option('include_prime_types_list') == 'False') { echo( 'selected' );} ?>>False</option>
+                    <option <?php if(get_option('include_prime_types_list') == 'True') { echo( 'selected' );} ?>>True</option>
+                  </select>
+                  <br>
+                  <label for="language">Select Language:</label>
+                  <select class="form-control" id="language" name="language">
+                    <option <?php if(get_option('language') == 'English') { echo( 'selected' );} ?>>English</option>
+                    <option <?php if(get_option('language') == 'Mandarin') { echo( 'selected' );} ?>>Mandarin</option>
+                    <option <?php if(get_option('language') == 'Hindi') { echo( 'selected' );} ?>>Hindi</option>
+                    <option <?php if(get_option('language') == 'Spanish') { echo( 'selected' );} ?>>Spanish</option>
+                    <option <?php if(get_option('language') == 'French') { echo( 'selected' );} ?>>French</option>
+                    <option <?php if(get_option('language') == 'German') { echo( 'selected' );} ?>>German</option>
+                    <option <?php if(get_option('language') == 'Italian') { echo( 'selected' );} ?>>Italian</option>
+                    <option <?php if(get_option('language') == 'Japanese') { echo( 'selected' );} ?>>Japanese</option>
+                    <option <?php if(get_option('language') == 'Russian') { echo( 'selected' );} ?>>Russian</option>
+                  </select>
+                  <br>
                   <label for="endpointInput"><strong>Endpoint Selection:</strong></label>
                   <div class="form-group checkbox-form">
                     <input class="form-check-input" type="checkbox" name="is_this_number_prime" value="1" <?php checked(1, get_option('is_this_number_prime'), true); ?> id="defaultCheck1 endpointInput">

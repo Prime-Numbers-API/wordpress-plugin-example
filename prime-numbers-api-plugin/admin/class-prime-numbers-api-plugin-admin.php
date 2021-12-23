@@ -133,6 +133,8 @@ class prime_numbers_api_Plugin_Admin {
 		 //registers all settings for general settings page
 		 register_setting( 'get_prime_settings', 'api_key' );
 		 register_setting( 'get_prime_settings', 'include_explanations' );
+		 register_setting( 'get_prime_settings', 'include_prime_types_list' );
+		 register_setting( 'get_prime_settings', 'language' );
 		 register_setting( 'get_prime_settings', 'is_this_number_prime' );
 		 register_setting( 'get_prime_settings', 'get_random_prime' );
 		 register_setting( 'get_prime_settings', 'get_primes_between_two_numbers' );
