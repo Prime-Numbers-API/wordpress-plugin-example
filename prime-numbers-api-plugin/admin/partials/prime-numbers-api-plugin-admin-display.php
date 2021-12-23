@@ -60,31 +60,34 @@
                     <label for="exampleFormControlInput1"><strong>API Key:</strong></label>
                     <input type="number" name="api_key" value="<?php echo get_option( 'api_key' ); ?>" class="form-control" id="exampleFormControlInput1" placeholder="Ex: YOUR_API_KEY" required>
                   </div>
-                  <label for="include_explanations">Include Explanations:</label>
-                  <select class="form-control" id="include_explanations" name="include_explanations">
-                    <option <?php if(get_option('include_explanations') == 'False') { echo( 'selected' );} ?>>False</option>
-                    <option <?php if(get_option('include_explanations') == 'True') { echo( 'selected' );} ?>>True</option>
-                  </select>
                   <br>
-                  <label for="include_prime_types_list">Include Prime Types List:</label>
-                  <select class="form-control" id="include_prime_types_list" name="include_prime_types_list">
-                    <option <?php if(get_option('include_prime_types_list') == 'False') { echo( 'selected' );} ?>>False</option>
-                    <option <?php if(get_option('include_prime_types_list') == 'True') { echo( 'selected' );} ?>>True</option>
-                  </select>
-                  <br>
-                  <label for="language">Select Language:</label>
-                  <select class="form-control" id="language" name="language">
-                    <option <?php if(get_option('language') == 'English') { echo( 'selected' );} ?>>English</option>
-                    <option <?php if(get_option('language') == 'Mandarin') { echo( 'selected' );} ?>>Mandarin</option>
-                    <option <?php if(get_option('language') == 'Hindi') { echo( 'selected' );} ?>>Hindi</option>
-                    <option <?php if(get_option('language') == 'Spanish') { echo( 'selected' );} ?>>Spanish</option>
-                    <option <?php if(get_option('language') == 'French') { echo( 'selected' );} ?>>French</option>
-                    <option <?php if(get_option('language') == 'German') { echo( 'selected' );} ?>>German</option>
-                    <option <?php if(get_option('language') == 'Italian') { echo( 'selected' );} ?>>Italian</option>
-                    <option <?php if(get_option('language') == 'Japanese') { echo( 'selected' );} ?>>Japanese</option>
-                    <option <?php if(get_option('language') == 'Russian') { echo( 'selected' );} ?>>Russian</option>
-                  </select>
-                  <br>
+                  <div class="form-group select-settings">
+                    <label for="include_explanations"><strong>Include Explanations:</strong></label>
+                    <select class="form-control" id="include_explanations" name="include_explanations">
+                      <option <?php if(get_option('include_explanations') == 'False') { echo( 'selected' );} ?>>False</option>
+                      <option <?php if(get_option('include_explanations') == 'True') { echo( 'selected' );} ?>>True</option>
+                    </select>
+                    <br>
+                    <label for="include_prime_types_list"><strong>Include Prime Types List:</strong></label>
+                    <select class="form-control" id="include_prime_types_list" name="include_prime_types_list">
+                      <option <?php if(get_option('include_prime_types_list') == 'False') { echo( 'selected' );} ?>>False</option>
+                      <option <?php if(get_option('include_prime_types_list') == 'True') { echo( 'selected' );} ?>>True</option>
+                    </select>
+                    <br>
+                    <label for="language"><strong>Select Language:</strong></label>
+                    <select class="form-control" id="language" name="language">
+                      <option <?php if(get_option('language') == 'English') { echo( 'selected' );} ?>>English</option>
+                      <option <?php if(get_option('language') == 'Mandarin') { echo( 'selected' );} ?>>Mandarin</option>
+                      <option <?php if(get_option('language') == 'Hindi') { echo( 'selected' );} ?>>Hindi</option>
+                      <option <?php if(get_option('language') == 'Spanish') { echo( 'selected' );} ?>>Spanish</option>
+                      <option <?php if(get_option('language') == 'French') { echo( 'selected' );} ?>>French</option>
+                      <option <?php if(get_option('language') == 'German') { echo( 'selected' );} ?>>German</option>
+                      <option <?php if(get_option('language') == 'Italian') { echo( 'selected' );} ?>>Italian</option>
+                      <option <?php if(get_option('language') == 'Japanese') { echo( 'selected' );} ?>>Japanese</option>
+                      <option <?php if(get_option('language') == 'Russian') { echo( 'selected' );} ?>>Russian</option>
+                    </select>
+                    <br>
+                  </div>
                   <label for="endpointInput"><strong>Endpoint Selection:</strong></label>
                   <div class="form-group checkbox-form">
                     <input class="form-check-input" type="checkbox" name="is_this_number_prime" value="1" <?php checked(1, get_option('is_this_number_prime'), true); ?> id="defaultCheck1 endpointInput">
@@ -136,7 +139,7 @@
               <li class="list-group-item">Refresh your API key when you need it</li>
               <li class="list-group-item">Increased maximum calls and call frequency</li>
               <li class="list-group-item">Access to our premium endpoints</li>
-              <li class="list-group-item">Email and forum support</li>
+              <li class="list-group-item">Help centre and support tickets</li>
               <li class="list-group-item">And much more...</li>
             </ul>
             <div class="card-footer">

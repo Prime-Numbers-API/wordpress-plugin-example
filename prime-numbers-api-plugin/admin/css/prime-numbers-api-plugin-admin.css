@@ -48,9 +48,8 @@
  }
 
  #wpbody-content > div.bg-light.p-5.rounded-lg.m-3 > div > div > div.col-8.left-column > div.card.settings-card > form > div > div.form-group.api-form > input.form-control {
-     max-width: 50%;
+     max-width: 95%;
      min-width: 10em;
-     margin-bottom: 10px;
  }
 
  #wpbody-content > div.bg-light.p-5.rounded-lg.m-3 > div > div > div.col-8.left-column > div.card.settings-card > form.plugin-settings > div.card-body > div.checkbox-form > input.form-check-input:checked {
