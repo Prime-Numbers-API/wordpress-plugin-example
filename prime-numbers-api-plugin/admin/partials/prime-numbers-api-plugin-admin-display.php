@@ -25,6 +25,7 @@
 
 
         <div class="col-8 left-column"><!-- column 1 of 2 -->
+
           <div class="card text-center featured-card">
             <div class="card-header">
               Featured News
@@ -119,15 +120,16 @@
                       Get Isolated Random Prime
                     </label>
                   </div>
-              
                   <button type="submit" class="btn btn-primary mb-2">Submit Settings</button>
                 </div>
               </form>
             </div>
+
         </div>
 
 
         <div class="col-4 right-column"><!-- column 2 of 2 -->
+
           <div class="card" >
             <div class="card-header">
               <h5>Premium Version</h5> 
@@ -146,6 +148,17 @@
             <a href="http://prime-numbers-api.com/" target="_blank" class="btn btn-primary">Upgrade</a>
             </div>
           </div>
+
+          <hr>
+          <div class="card" >
+            <div class="card-header">
+              <h5>Shortcode Settings</h5> 
+            </div>
+            <p class="lead">
+            Some attributes are specific to certain endpoints.  You may customize these attributes to your liking.  For example, the <strong>Is This Number Prime</strong> endpoint uses <strong>number</strong> which equals <strong>41</strong> by default.  If you head over to the <strong>Posts</strong> page and select <strong>Is This Number Prime</strong>, you can see: <br><code>[is_this_number_prime_shortcode number="41"]</code><br> Enter the number you want to check in place of 41, click <strong class="text-primary">Update</strong>, and you're ready to view the new request results in the relevant blog post. 
+            </p>
+          </div>
+
 
         </div>
 
