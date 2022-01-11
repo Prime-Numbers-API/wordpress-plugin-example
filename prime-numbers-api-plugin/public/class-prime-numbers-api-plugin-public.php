@@ -102,7 +102,7 @@ class prime_numbers_api_Plugin_Public {
 
 	
 	
-	public function public_is_this_number_prime() {
+	public function public_is_this_number_prime( $atts ) {
 		
 		function console_log($output, $with_script_tags = true) {
 			$js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) . ');';
@@ -111,6 +111,13 @@ class prime_numbers_api_Plugin_Public {
 			}
 			echo $js_code;
 		}
+
+		//Number Attribute
+		$atts = shortcode_atts( 
+			array(
+				'number' => '41'
+			), $atts, 'is_this_number_prime_shortcode');
+
 
 		//get general settings
 		$user_api_key = get_option( 'api_key' );
@@ -124,7 +131,7 @@ class prime_numbers_api_Plugin_Public {
 		$user_get_isolated_random_prime = get_option( 'get_isolated_random_prime' );
 
 		if ($user_is_prime == "1") {
-				$url = 'http://api.prime-numbers.io/is-this-number-prime.php?key=' . $user_api_key . '&number=41' . '&include_explanations=' . $user_include_explanations . '&include_prime_types_list=' . $user_include_prime_types_list . '&language=' . $user_language;
+				$url = 'http://api.prime-numbers.io/is-this-number-prime.php?key=' . $user_api_key . "&number=" . "{$atts['number']}" . '&include_explanations=' . $user_include_explanations . '&include_prime_types_list=' . $user_include_prime_types_list . '&language=' . $user_language;
 				console_log($url);
 				$arguments = array(
 					'method' => 'GET',
