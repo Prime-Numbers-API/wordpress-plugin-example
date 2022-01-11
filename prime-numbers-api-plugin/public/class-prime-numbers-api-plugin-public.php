@@ -104,15 +104,16 @@ class prime_numbers_api_Plugin_Public {
 	
 	public function public_is_this_number_prime( $atts ) {
 		
-		function console_log($output, $with_script_tags = true) {
-			$js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) . ');';
-			if ($with_script_tags) {
-				$js_code = '<script>' . $js_code . '</script>';
-			}
-			echo $js_code;
-		}
+		//custom console_log function
+		// function console_log($output, $with_script_tags = true) {
+		// 	$js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) . ');';
+		// 	if ($with_script_tags) {
+		// 		$js_code = '<script>' . $js_code . '</script>';
+		// 	}
+		// 	echo $js_code;
+		// }
 
-		//Number Attribute
+		//number attribute
 		$atts = shortcode_atts( 
 			array(
 				'number' => '41'
@@ -131,8 +132,8 @@ class prime_numbers_api_Plugin_Public {
 		$user_get_isolated_random_prime = get_option( 'get_isolated_random_prime' );
 
 		if ($user_is_prime == "1") {
-				$url = 'http://api.prime-numbers.io/is-this-number-prime.php?key=' . $user_api_key . "&number=" . "{$atts['number']}" . '&include_explanations=' . $user_include_explanations . '&include_prime_types_list=' . $user_include_prime_types_list . '&language=' . $user_language;
-				console_log($url);
+				$url = 'http://api.prime-numbers.io/is-this-number-prime.php?key=' . $user_api_key . '&number=' . "{$atts['number']}" . '&include_explanations=' . $user_include_explanations . '&include_prime_types_list=' . $user_include_prime_types_list . '&language=' . $user_language;
+				// console_log($url);
 				$arguments = array(
 					'method' => 'GET',
 					'timeout' => '12'
@@ -249,7 +250,16 @@ class prime_numbers_api_Plugin_Public {
 
 
 
-	public function public_get_primes_between_two_numbers() {
+	public function public_get_primes_between_two_numbers( $atts ) {
+
+		//start and end attributes
+		$atts = shortcode_atts( 
+			array(
+				'start' => '350',
+				'end' => '1000'
+			), $atts, 'get_primes_between_two_numbers_shortcode');
+
+
 		//get general settings
 		$user_api_key = get_option( 'api_key' );
 		$user_include_explanations = strtolower(get_option( 'include_explanations' ));
@@ -262,7 +272,7 @@ class prime_numbers_api_Plugin_Public {
 		$user_get_isolated_random_prime = get_option( 'get_isolated_random_prime' );
 
 		if ($user_get_primes_between_two_numbers == "1") {
-			$url = 'http://api.prime-numbers.io/get-all-primes-between-two-numbers.php?key=' . $user_api_key . '&start=350&end=1000' . '&include_explanations=' . $user_include_explanations . '&include_prime_types_list=' . $user_include_prime_types_list . '&language=' . $user_language;
+			$url = 'http://api.prime-numbers.io/get-all-primes-between-two-numbers.php?key=' . $user_api_key . '&start=' . "{$atts['start']}" . '&end=' . "{$atts['end']}" . '&include_explanations=' . $user_include_explanations . '&include_prime_types_list=' . $user_include_prime_types_list . '&language=' . $user_language;
 	
 			$arguments = array(
 				'method' => 'GET',
@@ -321,7 +331,15 @@ class prime_numbers_api_Plugin_Public {
 	}
 
 
-	public function public_prospect_primes() {
+	public function public_prospect_primes( $atts ) {
+
+		//start and end attributes
+		$atts = shortcode_atts( 
+			array(
+				'start' => '350',
+				'end' => '1000'
+			), $atts, 'prospect_primes_shortcode');
+
 		//get general settings
 		$user_api_key = get_option( 'api_key' );
 		$user_include_explanations = strtolower(get_option( 'include_explanations' ));
@@ -335,7 +353,7 @@ class prime_numbers_api_Plugin_Public {
 
 		if ($user_prospect_primes == "1") {
 
-			$url = 'http://api.prime-numbers.io/prospect-primes-between-two-numbers.php?key=' . $user_api_key . '&start=350&end=1000' . '&include_explanations=' . $user_include_explanations . '&include_prime_types_list=' . $user_include_prime_types_list . '&language=' . $user_language;
+			$url = 'http://api.prime-numbers.io/prospect-primes-between-two-numbers.php?key=' . $user_api_key . '&start=' . "{$atts['start']}" . '&end=' . "{$atts['end']}" . '&include_explanations=' . $user_include_explanations . '&include_prime_types_list=' . $user_include_prime_types_list . '&language=' . $user_language;
 			
 			$arguments = array(
 				'method' => 'GET',
@@ -389,7 +407,14 @@ class prime_numbers_api_Plugin_Public {
 
 
 
-	public function public_get_isolated_random_prime() {
+	public function public_get_isolated_random_prime( $atts ) {
+
+		//minimum combined prime gap attribute
+		$atts = shortcode_atts( 
+			array(
+				'gap' => '200'
+			), $atts, 'get_isolated_random_prime_shortcode');
+
 		//get general settings
 		$user_api_key = get_option( 'api_key' );
 		$user_include_explanations = strtolower(get_option( 'include_explanations' ));
@@ -403,7 +428,7 @@ class prime_numbers_api_Plugin_Public {
 
 		if ($user_get_isolated_random_prime == "1") {
 
-			$url = 'http://api.prime-numbers.io/get-isolated-random-prime.php?key=' . $user_api_key . '&include_explanations=' . $user_include_explanations . '&include_prime_types_list=' . $user_include_prime_types_list . '&language=' . $user_language;
+			$url = 'http://api.prime-numbers.io/get-isolated-random-prime.php?key=' . $user_api_key . '&include_explanations=' . $user_include_explanations . '&include_prime_types_list=' . $user_include_prime_types_list . '&minimum_combined_prime_gap=' . "{$atts['gap']}" . '&language=' . $user_language;
 			
 			$arguments = array(
 				'method' => 'GET',
