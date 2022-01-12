@@ -182,8 +182,8 @@ class prime_numbers_api_Plugin {
 		//add shortcode
 		$this->loader->add_shortcode( 'is_this_number_prime_shortcode', $plugin_public, 'public_is_this_number_prime' );
 		$this->loader->add_shortcode( 'get_random_prime_shortcode', $plugin_public, 'public_get_random_prime' );
-		$this->loader->add_shortcode( 'get_primes_between_two_numbers_shortcode', $plugin_public, 'public_get_primes_between_two_numbers' );
-		$this->loader->add_shortcode( 'prospect_primes_shortcode', $plugin_public, 'public_prospect_primes' );
+		$this->loader->add_shortcode( 'get_all_primes_between_two_numbers_shortcode', $plugin_public, 'public_get_all_primes_between_two_numbers' );
+		$this->loader->add_shortcode( 'prospect_primes_between_two_numbers_shortcode', $plugin_public, 'public_prospect_primes_between_two_numbers' );
 		$this->loader->add_shortcode( 'get_isolated_random_prime_shortcode', $plugin_public, 'public_get_isolated_random_prime' );
 
 	}

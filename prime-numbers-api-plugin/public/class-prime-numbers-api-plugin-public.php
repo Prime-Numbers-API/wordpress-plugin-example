@@ -127,8 +127,8 @@ class prime_numbers_api_Plugin_Public {
 		$user_language = strtolower(get_option( 'language' ));
 		$user_is_prime = get_option( 'is_this_number_prime' );
 		$user_get_random_prime = get_option( 'get_random_prime' );
-		$user_get_primes_between_two_numbers = get_option( 'get_primes_between_two_numbers' );
-		$user_prospect_primes = get_option( 'prospect_primes' );
+		$user_get_all_primes_between_two_numbers = get_option( 'get_all_primes_between_two_numbers' );
+		$user_prospect_primes_between_two_numbers = get_option( 'prospect_primes_between_two_numbers' );
 		$user_get_isolated_random_prime = get_option( 'get_isolated_random_prime' );
 
 		if ($user_is_prime == "1") {
@@ -194,8 +194,8 @@ class prime_numbers_api_Plugin_Public {
 		$user_language = strtolower(get_option( 'language' ));
 		$user_is_prime = get_option( 'is_this_number_prime' );
 		$user_get_random_prime = get_option( 'get_random_prime' );
-		$user_get_primes_between_two_numbers = get_option( 'get_primes_between_two_numbers' );
-		$user_prospect_primes = get_option( 'prospect_primes' );
+		$user_get_all_primes_between_two_numbers = get_option( 'get_all_primes_between_two_numbers' );
+		$user_prospect_primes_between_two_numbers = get_option( 'prospect_primes_between_two_numbers' );
 		$user_get_isolated_random_prime = get_option( 'get_isolated_random_prime' );
 
 		if ($user_get_random_prime == "1") {
@@ -250,14 +250,14 @@ class prime_numbers_api_Plugin_Public {
 
 
 
-	public function public_get_primes_between_two_numbers( $atts ) {
+	public function public_get_all_primes_between_two_numbers( $atts ) {
 
 		//start and end attributes
 		$atts = shortcode_atts( 
 			array(
 				'start' => '350',
 				'end' => '1000'
-			), $atts, 'get_primes_between_two_numbers_shortcode');
+			), $atts, 'get_all_primes_between_two_numbers_shortcode');
 
 
 		//get general settings
@@ -267,11 +267,11 @@ class prime_numbers_api_Plugin_Public {
 		$user_language = strtolower(get_option( 'language' ));
 		$user_is_prime = get_option( 'is_this_number_prime' );
 		$user_get_random_prime = get_option( 'get_random_prime' );
-		$user_get_primes_between_two_numbers = get_option( 'get_primes_between_two_numbers' );
-		$user_prospect_primes = get_option( 'prospect_primes' );
+		$user_get_all_primes_between_two_numbers = get_option( 'get_all_primes_between_two_numbers' );
+		$user_prospect_primes_between_two_numbers = get_option( 'prospect_primes_between_two_numbers' );
 		$user_get_isolated_random_prime = get_option( 'get_isolated_random_prime' );
 
-		if ($user_get_primes_between_two_numbers == "1") {
+		if ($user_get_all_primes_between_two_numbers == "1") {
 			$url = 'http://api.prime-numbers.io/get-all-primes-between-two-numbers.php?key=' . $user_api_key . '&start=' . "{$atts['start']}" . '&end=' . "{$atts['end']}" . '&include_explanations=' . $user_include_explanations . '&include_prime_types_list=' . $user_include_prime_types_list . '&language=' . $user_language;
 	
 			$arguments = array(
@@ -331,14 +331,14 @@ class prime_numbers_api_Plugin_Public {
 	}
 
 
-	public function public_prospect_primes( $atts ) {
+	public function public_prospect_primes_between_two_numbers( $atts ) {
 
 		//start and end attributes
 		$atts = shortcode_atts( 
 			array(
 				'start' => '350',
 				'end' => '1000'
-			), $atts, 'prospect_primes_shortcode');
+			), $atts, 'prospect_primes_between_two_numbers_shortcode');
 
 		//get general settings
 		$user_api_key = get_option( 'api_key' );
@@ -347,11 +347,11 @@ class prime_numbers_api_Plugin_Public {
 		$user_language = strtolower(get_option( 'language' ));
 		$user_is_prime = get_option( 'is_this_number_prime' );
 		$user_get_random_prime = get_option( 'get_random_prime' );
-		$user_get_primes_between_two_numbers = get_option( 'get_primes_between_two_numbers' );
-		$user_prospect_primes = get_option( 'prospect_primes' );
+		$user_get_all_primes_between_two_numbers = get_option( 'get_all_primes_between_two_numbers' );
+		$user_prospect_primes_between_two_numbers = get_option( 'prospect_primes_between_two_numbers' );
 		$user_get_isolated_random_prime = get_option( 'get_isolated_random_prime' );
 
-		if ($user_prospect_primes == "1") {
+		if ($user_prospect_primes_between_two_numbers == "1") {
 
 			$url = 'http://api.prime-numbers.io/prospect-primes-between-two-numbers.php?key=' . $user_api_key . '&start=' . "{$atts['start']}" . '&end=' . "{$atts['end']}" . '&include_explanations=' . $user_include_explanations . '&include_prime_types_list=' . $user_include_prime_types_list . '&language=' . $user_language;
 			
@@ -422,8 +422,8 @@ class prime_numbers_api_Plugin_Public {
 		$user_language = strtolower(get_option( 'language' ));
 		$user_is_prime = get_option( 'is_this_number_prime' );
 		$user_get_random_prime = get_option( 'get_random_prime' );
-		$user_get_primes_between_two_numbers = get_option( 'get_primes_between_two_numbers' );
-		$user_prospect_primes = get_option( 'prospect_primes' );
+		$user_get_all_primes_between_two_numbers = get_option( 'get_all_primes_between_two_numbers' );
+		$user_prospect_primes_between_two_numbers = get_option( 'prospect_primes_between_two_numbers' );
 		$user_get_isolated_random_prime = get_option( 'get_isolated_random_prime' );
 
 		if ($user_get_isolated_random_prime == "1") {

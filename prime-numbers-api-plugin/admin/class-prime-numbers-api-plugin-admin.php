@@ -137,8 +137,8 @@ class prime_numbers_api_Plugin_Admin {
 		 register_setting( 'get_prime_settings', 'language' );
 		 register_setting( 'get_prime_settings', 'is_this_number_prime' );
 		 register_setting( 'get_prime_settings', 'get_random_prime' );
-		 register_setting( 'get_prime_settings', 'get_primes_between_two_numbers' );
-		 register_setting( 'get_prime_settings', 'prospect_primes' );
+		 register_setting( 'get_prime_settings', 'get_all_primes_between_two_numbers' );
+		 register_setting( 'get_prime_settings', 'prospect_primes_between_two_numbers' );
 		 register_setting( 'get_prime_settings', 'get_isolated_random_prime' );
 	 }
 }

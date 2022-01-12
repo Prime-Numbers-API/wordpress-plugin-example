@@ -27,13 +27,13 @@
         <div class="col-8 left-column"><!-- column 1 of 2 -->
 
           <div class="card text-center featured-card">
-            <div class="card-header">
+            <!-- <div class="card-header">
               Featured News
-            </div>
+            </div> -->
             <div class="card-body">
-              <h5 class="card-title">Prime Numbers Launched!</h5>
+              <h5 class="card-title">Prime-Numbers-API.com</h5>
               <p class="card-text">Subscribe to our API and take full advantage of the largest database of Prime Numbers in the world!</p>
-              <a href="http://prime-numbers-api.com/" target="_blank" class="btn btn-primary">Let's Go!</a>
+              <a href="https://prime-numbers-api.com/" target="_blank" class="btn btn-primary">Let's Go!</a>
             </div>
           </div>
 
@@ -43,7 +43,15 @@
               <h5 class="card-header">Getting Started</h5>
               <div class="card-body">
                 <h5 class="card-title">Welcome to the Prime Numbers API!</h5>
-                <p class="card-text">By default you have access to our basic enpoints: <strong>Get Random Prime</strong> and <strong>Is This Number Prime</strong>. You should start by entering your <u>API Key</u> below in the <strong>Plugin Settings</strong>, then head over to the <a href="http://localhost/localsite/blog/" target="_blank" class="text-decoration-none">blog posts</a> to see real time outputs from your enabled requests! Check out our <strong><a href="http://prime-numbers-api.com/" target="_blank" class="text-decoration-none link-danger">Premium</a></strong> upgrade options for access to exclusive endpoints. Whether you're an educator <strong>prospecting</strong> for specific primes, a scientist or engineer in need of <strong>all the primes between two numbers</strong>, or searching for <strong>isolated primes</strong> to meet your security needs, <strong><a href="http://prime-numbers-api.com/" target="_blank" class="text-decoration-none">Prime Numbers API</a></strong> has something for you! Our database now has over 5 billion primes and counting!</p>
+                <p class="card-text">
+                  By default you have access to our basic enpoints: <strong>Get Random Prime</strong> and <strong>Is This Number Prime</strong>. You should start by entering your <u>API Key</u> below in the <strong>Plugin Settings</strong>. Be sure to select your desired options and which endpoints you wish to enable. 
+                  <br>
+                  <br>
+                  Next, you'll need to create a custom <strong class="text-primary">Post</strong> where you'll enter the necessary shortcode to display in your <strong class="text-primary">blog posts</strong> and see real time outputs from your enabled requests! There are five shortcodes, one for each endpoint, and you can see an example of each in the <strong>Shortcode Settings</strong> to the right.
+                  <br>
+                  <br>
+                  Check out our <strong><a href="https://prime-numbers-api.com/" target="_blank" class="text-decoration-none link-danger">Premium</a></strong> upgrade options for access to exclusive endpoints. Whether you're an educator <strong>prospecting</strong> for specific primes, a scientist or engineer in need of <strong>all the primes between two numbers</strong>, or searching for <strong>isolated primes</strong> to meet your security needs, <strong><a href="https://prime-numbers-api.com/" target="_blank" class="text-decoration-none">Prime Numbers API</a></strong> has something for you! Our database now has over 5 billion primes and counting!
+                </p>
               </div>
             </div>
 
@@ -103,13 +111,13 @@
                     </label>
                   </div>
                   <div class="form-group checkbox-form">
-                    <input class="form-check-input" type="checkbox" name="get_primes_between_two_numbers" value="1" <?php checked(1, get_option('get_primes_between_two_numbers'), true); ?> id="defaultCheck3 endpointInput">
+                    <input class="form-check-input" type="checkbox" name="get_all_primes_between_two_numbers" value="1" <?php checked(1, get_option('get_all_primes_between_two_numbers'), true); ?> id="defaultCheck3 endpointInput">
                     <label class="form-check-label" for="defaultCheck3">
                       Get All Primes Between Two Numbers
                     </label>
                   </div>
                   <div class="form-group checkbox-form">
-                    <input class="form-check-input" type="checkbox" name="prospect_primes" value="1" <?php checked(1, get_option('prospect_primes'), true); ?> id="defaultCheck4 endpointInput">
+                    <input class="form-check-input" type="checkbox" name="prospect_primes_between_two_numbers" value="1" <?php checked(1, get_option('prospect_primes_between_two_numbers'), true); ?> id="defaultCheck4 endpointInput">
                     <label class="form-check-label" for="defaultCheck4">
                       Prospect Primes Between Two Numbers
                     </label>
@@ -134,6 +142,7 @@
             <div class="card-header">
               <h5>Premium Version</h5> 
             </div>
+            <br>
             <p class="lead">
             Upgrade to the premium version and get the following features:
             </p>
@@ -145,7 +154,7 @@
               <li class="list-group-item">And much more...</li>
             </ul>
             <div class="card-footer">
-            <a href="http://prime-numbers-api.com/" target="_blank" class="btn btn-primary">Upgrade</a>
+            <a href="https://prime-numbers-api.com/" target="_blank" class="btn btn-primary">Upgrade</a>
             </div>
           </div>
 
@@ -154,9 +163,26 @@
             <div class="card-header">
               <h5>Shortcode Settings</h5> 
             </div>
+            <br>
             <p class="lead">
-            Some attributes are specific to certain endpoints.  You may customize these attributes to your liking.  For example, the <strong>Is This Number Prime</strong> endpoint uses <strong>number</strong> which equals <strong>41</strong> by default.  If you head over to the <strong>Posts</strong> page and select <strong>Is This Number Prime</strong>, you can see: <br><code>[is_this_number_prime_shortcode number="41"]</code><br> Enter the number you want to check in place of 41, click <strong class="text-primary">Update</strong>, and you're ready to view the new request results in the relevant blog post. 
+              Some attributes are specific to certain endpoints.  You may customize these attributes to your liking.  For example, the <strong>Is This Number Prime</strong> endpoint uses <strong>'number'</strong> which equals <strong>'41'</strong> by default.  If you head over to the <strong>Posts</strong> page and create or select <strong>Is This Number Prime</strong>, you can see: 
+              <br>
+              <br>
+              <code>[is_this_number_prime_shortcode number="41"]</code>
+              <br>
+              <br>
+              Enter the number you want to check in place of 41, click <strong class="text-primary">Update</strong>, and you're ready to view the new request results in the relevant blog post! 
+              <br>
+              <br>
+                The five enpoint shortcodes and their attributes are:
             </p>
+            <ol>
+              <li><code>[is_this_number_prime_shortcode number="41"]</code></li>
+              <li><code>[get_random_prime_shortcode]</code></li>
+              <li><code>[get_all_primes_between_two_numbers_shortcode start="350" end="1000"]</code></li>
+              <li><code>[prospect_primes_between_two_numbers_shortcode start="350" end="1000"]</code></li>
+              <li><code>[get_isolated_random_prime_shortcode gap="200"]</code></li>
+            </ol>
           </div>
 
 
